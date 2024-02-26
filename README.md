@@ -28,22 +28,31 @@ import numpy as np
 import matplotlib.pyplot as plt
 data = pd.read_csv("/content/SAMPLEIDS.csv")
 data.head()
+```
+![image](https://github.com/Yamunaasri/exno1/assets/115707860/2e6f57eb-a0eb-46c0-80b6-78ef2ff9c3b4)
 
+```
 data = pd.get_dummies(data)
 data.isnull().sum()
-
+```
+![image](https://github.com/Yamunaasri/exno1/assets/115707860/b11b71a8-0335-4acf-8e69-555a75bacf24)
+```
 columns_with_null = data.columns[data.isnull().any()]
 import seaborn as sns
 plt.figure(figsize=(10,10))
 sns.barplot(columns_with_null)
 plt.title("NULL VALUES")
 plt.show()
-
+```
+![image](https://github.com/Yamunaasri/exno1/assets/115707860/deddaf55-87f4-42dc-b4ce-280775cc04b5)
+```
 for column in columns_with_null:
     median = data[column].median()  
     data[column].fillna(median, inplace=True)
 data.isnull().sum().sum()
 ```
+![image](https://github.com/Yamunaasri/exno1/assets/115707860/5636ffde-4bb3-4f4b-979f-f81fe1ee00bd)
+
 ## IQR
 ```
 import pandas as pd
