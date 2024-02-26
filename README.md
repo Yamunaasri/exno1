@@ -21,6 +21,10 @@ STEP 5: Remove outliers using IQR
 STEP 6: Use zscore of to remove outliers
 
 # Coding and Output
+```
+NAME: T S YAMUNAASRI
+REGNO: 212222240117
+```
 ## DATA CLEANING
 ```
 import pandas as pd
